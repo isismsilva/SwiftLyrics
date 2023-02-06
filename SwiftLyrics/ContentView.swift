@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var searchText: String = ""
+    @State private var searchText: String = ""
 
     var body: some View {
         NavigationStack {
@@ -34,7 +34,7 @@ struct ContentView: View {
                     }
                 }
                 .searchable(text: $searchText)
-                .navigationTitle("Taylor Swift")
+                .navigationTitle("Albums")
                 .padding(.horizontal)
                 .edgesIgnoringSafeArea(.bottom)
             }

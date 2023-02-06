@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct Lyric: View {
+    @Environment(\.presentationMode) var presentationMode
     let music: Track
 
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "sun.")
-                Text(music.title)
+                Button(action: { presentationMode.wrappedValue.dismiss() }) {
+                    Image(systemName: "chevron.down")
+                        .fontWeight(.bold)
+                        .padding(10)
+                        .background(Color.white.opacity(0.5))
+                        .clipShape(Circle())
+                        .foregroundColor(.pink)
+                }
+
+                VStack {
+                    Text(music.title)
+                }
+                Spacer()
             }
+            .padding(.horizontal)
 
             ScrollView {
                 Text(music.lyric)
@@ -29,13 +42,14 @@ struct Lyric: View {
         .background(
             LinearGradient(colors: [.pink, .black], startPoint: .top, endPoint: .bottom)
                 .blur(radius: 200)
-        )  
+        )
+        .navigationBarHidden(true)
     }
 }
 
 struct Lyric_Previews: PreviewProvider {
     static var previews: some View {
-        let music = Track(id: 0, title: "Anti-Hero", lyric: "hdivbsibvisbvibas\nibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasib\nvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvi\nbvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibvhdivbsibvisbvibasibvibv")
+        let music = albums.first!.tracks.first!
         Lyric(music: music)
     }
 }
