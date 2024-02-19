@@ -26,7 +26,6 @@ struct CoverView: View {
   }
 }
 
-
 #Preview {
   CoverView(album: Album(id: 01, image: "7", title: "Lover", artist: "TS", year: "1984", tracks: []))
 }

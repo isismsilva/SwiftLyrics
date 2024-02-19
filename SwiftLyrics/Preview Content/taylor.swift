@@ -1,12 +1,12 @@
 import Foundation
 
-struct Track {
+struct Track: Identifiable {
     let id: Int
     let title: String
     let lyric: String
 }
 
-struct Album {
+struct Album: Identifiable {
     let id: Int
     let image: String
     let title: String
@@ -16,7 +16,6 @@ struct Album {
 }
 
 var albums: [Album] = [
-    
     Album(id: 1, image: "1", title: "Taylor Swift", artist: "Taylor Swift", year: "2006",
     tracks: [
         

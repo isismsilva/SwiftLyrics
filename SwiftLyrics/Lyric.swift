@@ -8,28 +8,11 @@
 import SwiftUI
 
 struct Lyric: View {
-  @Environment(\.presentationMode) var presentationMode
   let music: Track
-  
+  @Environment(\.presentationMode) var presentationMode
+
   var body: some View {
     VStack {
-      HStack {
-        Button(action: { presentationMode.wrappedValue.dismiss() }) {
-          Image(systemName: "chevron.left")
-            .fontWeight(.bold)
-            .padding(10)
-            .background(Color.white.opacity(0.5))
-            .clipShape(Circle())
-            .foregroundColor(.pink)
-        }
-        
-        VStack {
-          Text(music.title).fontWeight(.bold)
-        }
-        Spacer()
-      }
-      .padding(.horizontal)
-      
       ScrollView {
         Text(music.lyric)
           .opacity(0.6)
@@ -43,7 +26,15 @@ struct Lyric: View {
       LinearGradient(colors: [.pink, .black], startPoint: .top, endPoint: .bottom)
         .blur(radius: 200)
     )
-    .navigationBarHidden(true)
+    .navigationBarBackButtonHidden(true)
+    .toolbar {
+      ToolbarItem(placement: .cancellationAction) {
+        BackButton(action: { presentationMode.wrappedValue.dismiss() })
+      }
+      ToolbarItem(placement: .principal) {
+        Text(music.title).fontWeight(.bold)
+      }
+    }
   }
 }
 

@@ -12,10 +12,11 @@
 		63F1133F29901642004D51CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F1133E29901642004D51CD /* Assets.xcassets */; };
 		63F1134229901642004D51CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F1134129901642004D51CD /* Preview Assets.xcassets */; };
 		63F11349299018A5004D51CD /* Lyric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F11348299018A5004D51CD /* Lyric.swift */; };
-		63F1134B29902900004D51CD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1134A29902900004D51CD /* Album.swift */; };
+		63F1134B29902900004D51CD /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1134A29902900004D51CD /* AlbumView.swift */; };
 		63F1135729906F0F004D51CD /* taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1135629906F0F004D51CD /* taylor.swift */; };
 		F9B4372C2B83505C00C1F405 /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4372B2B83505C00C1F405 /* TrackCellView.swift */; };
 		F9B4372E2B836FE700C1F405 /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4372D2B836FE700C1F405 /* CoverView.swift */; };
+		F9B437302B837AE100C1F405 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4372F2B837AE100C1F405 /* BackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +26,11 @@
 		63F1133E29901642004D51CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63F1134129901642004D51CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63F11348299018A5004D51CD /* Lyric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyric.swift; sourceTree = "<group>"; };
-		63F1134A29902900004D51CD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		63F1134A29902900004D51CD /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		63F1135629906F0F004D51CD /* taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taylor.swift; sourceTree = "<group>"; };
 		F9B4372B2B83505C00C1F405 /* TrackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
 		F9B4372D2B836FE700C1F405 /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
+		F9B4372F2B837AE100C1F405 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,9 @@
 			children = (
 				F9B4372B2B83505C00C1F405 /* TrackCellView.swift */,
 				63F1133A29901640004D51CD /* SwiftLyricsApp.swift */,
+				F9B4372F2B837AE100C1F405 /* BackButton.swift */,
 				63F1133C29901640004D51CD /* ContentView.swift */,
-				63F1134A29902900004D51CD /* Album.swift */,
+				63F1134A29902900004D51CD /* AlbumView.swift */,
 				F9B4372D2B836FE700C1F405 /* CoverView.swift */,
 				63F11348299018A5004D51CD /* Lyric.swift */,
 				63F1133E29901642004D51CD /* Assets.xcassets */,
@@ -152,13 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B437302B837AE100C1F405 /* BackButton.swift in Sources */,
 				F9B4372C2B83505C00C1F405 /* TrackCellView.swift in Sources */,
 				F9B4372E2B836FE700C1F405 /* CoverView.swift in Sources */,
 				63F1133D29901640004D51CD /* ContentView.swift in Sources */,
 				63F1135729906F0F004D51CD /* taylor.swift in Sources */,
 				63F1133B29901640004D51CD /* SwiftLyricsApp.swift in Sources */,
 				63F11349299018A5004D51CD /* Lyric.swift in Sources */,
-				63F1134B29902900004D51CD /* Album.swift in Sources */,
+				63F1134B29902900004D51CD /* AlbumView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftLyrics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,6 +338,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftLyrics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
