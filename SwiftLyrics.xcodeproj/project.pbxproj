@@ -14,6 +14,7 @@
 		63F11349299018A5004D51CD /* Lyric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F11348299018A5004D51CD /* Lyric.swift */; };
 		63F1134B29902900004D51CD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1134A29902900004D51CD /* Album.swift */; };
 		63F1135729906F0F004D51CD /* taylor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1135629906F0F004D51CD /* taylor.swift */; };
+		F9B4372C2B83505C00C1F405 /* TrackCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4372B2B83505C00C1F405 /* TrackCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		63F11348299018A5004D51CD /* Lyric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyric.swift; sourceTree = "<group>"; };
 		63F1134A29902900004D51CD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		63F1135629906F0F004D51CD /* taylor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taylor.swift; sourceTree = "<group>"; };
+		F9B4372B2B83505C00C1F405 /* TrackCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				63F11348299018A5004D51CD /* Lyric.swift */,
 				63F1133E29901642004D51CD /* Assets.xcassets */,
 				63F1134029901642004D51CD /* Preview Content */,
+				F9B4372B2B83505C00C1F405 /* TrackCellView.swift */,
 			);
 			path = SwiftLyrics;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B4372C2B83505C00C1F405 /* TrackCellView.swift in Sources */,
 				63F1133D29901640004D51CD /* ContentView.swift in Sources */,
 				63F1135729906F0F004D51CD /* taylor.swift in Sources */,
 				63F1133B29901640004D51CD /* SwiftLyricsApp.swift in Sources */,

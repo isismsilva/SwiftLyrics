@@ -27,30 +27,8 @@ struct AlbumView: View {
                 .listRowSeparator(.hidden)
 
                 ForEach(album.tracks, id: \.id) { track in
-                    Button {
-                        showLyric.toggle()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Text("\(track.id)")
-                                .frame(width: 20)
-
-                                VStack(alignment: .leading) {
-                                    Text(track.title)
-                                        .font(.system(size: 18))
-
-                                    Text(track.lyric)
-                                        .font(.system(size: 16, weight: .light))
-                                        .lineLimit(1)
-                                        .font(.body)
-                                        .opacity(0.6)
-                                        .padding(.trailing)
-                                }
-                        }
-                        .padding(.horizontal)
-                    }
-                    .fullScreenCover(isPresented: $showLyric) {
-                        Lyric(music: track)
-                    }
+                  NavigationLink(destination: Lyric(music: track)) { TrackCellView(track)
+                  }
                 }
                 .listRowInsets(.init(top: 4, leading: 10, bottom: 4, trailing: -10))
             }
