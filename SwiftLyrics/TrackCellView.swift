@@ -21,6 +21,7 @@ struct TrackCellView: View {
       VStack(alignment: .leading) {
         Text(track.title)
           .font(.system(size: 18))
+          .fontWeight(.bold)
         
         Text(track.lyric)
           .font(.system(size: 16, weight: .light))
