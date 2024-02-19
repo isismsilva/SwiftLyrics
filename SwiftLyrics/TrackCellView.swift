@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrackCellView: View {
   let track: Track
-  
+
   init(_ track: Track) {
     self.track = track
   }
@@ -17,7 +17,12 @@ struct TrackCellView: View {
     HStack(spacing: 8) {
       Text("\(track.id)")
         .frame(width: 20)
-      
+        .fontWeight(.bold)
+        .padding(6)
+        .foregroundStyle(.white)
+        .background(Color.pink)
+        .clipShape(.circle)
+
       VStack(alignment: .leading) {
         Text(track.title)
           .font(.system(size: 18))
